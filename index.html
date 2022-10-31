@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Urna eletronica</title>
+</head>
+<body>
+  <main class="container">
+    <h1 class="titulo">Eleição para saber qual é o maior de Minas</h1>
+    <h2 class="titulo__secundario">Se você acha que o Cruzeiro é o maior de Minas, vote 6</h2>
+    <h2 class="titulo__secundario">Se você acha que o Atleticomg é o maior de Minas, vote 1</h2>
+    <div class="urna">
+      <div id="tela">
+        <input type="text" class="tela__number" maxlength="2" autofocus>
+        <img src="" alt="" id="tela__img">
+      </div>
+      <button class="imprime__boletim">Imprimir boletim</button>
+      <fieldset class="teclado">
+        <div class="teclado__numerico">
+          <button class="teclado__btn btn__um" onclick="insert('1')">1</button>
+          <button class="teclado__btn" onclick="inserir('2')">2</button>
+          <button class="teclado__btn" onclick="inserir('3')">3</button>
+          <button class="teclado__btn" onclick="inserir('4')">4</button>
+          <button class="teclado__btn" onclick="inserir('5')">5</button>
+          <button class="teclado__btn" onclick="inserir('6')">6</button>
+          <button class="teclado__btn" onclick="inserir('7')">7</button>
+          <button class="teclado__btn" onclick="inserir('8')">8</button>
+          <button class="teclado__btn" onclick="inserir('9')">9</button>
+          <button class="teclado__btn btn__zero" onclick="inserir('0')">0</button>
+        </div>
+        <div class="controla">
+          <button class="branco" onclick="votarBranco()">Branco</button>
+          <button class="corrige" onclick="corrigir()">Corrige</button>
+          <button class="confirma" onclick="confirmar()">Confirma</button>
+        </div>
+      </fieldset>
+      <div class="teste"></div>
+    </div>
+    
+    
+    <div class="overflow">
+      <div class="resultado">
+        <span class="res__cru"></span>
+        <span class="res__atl"></span>
+        <span class="branco__res"></span>
+        <span class="nulo__res"></span>
+        <p class="resultado__final"></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
